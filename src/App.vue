@@ -5,6 +5,8 @@
   </div>
 </template>
 <script>
+import Ajax from './utils/ajax'
+import Parameter from './utils/parameter'
 export default {
   name: 'name',
   data () {
@@ -13,14 +15,15 @@ export default {
       a: 1
     }
   },
+  created () {
+    console.log(Ajax);
+  },
   methods: {
     getJson () {
-      this.$http.get('/static/json/data.json', [])
-      .then((option) => {
-        alert('success')
-      }, (option) => {
-        alert('error')
-      })
+      // Axios.post('/static/json/data.json')
+      // .then(function (response) {
+      //   alert('success')
+      // })
     }
   }
 }
