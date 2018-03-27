@@ -1,27 +1,51 @@
 <template>
-  <div class="app">
-    <el-checkbox v-model="checked">备选项</el-checkbox>
-    <a @click="getJson">getJson</a>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <router-view/>
+    <Transition></Transition>
+    <Loading v-if="showLoading"></Loading> 
+    <a href="javascript:;" @click="handleClick">点击</a>
   </div>
 </template>
+
 <script>
+import ajax from "@/utils/ajax"
+import Loading from "@/components/common/loading"
 export default {
-  name: 'name',
-  data () {
+  name: 'App',
+  data(){
     return {
-      checked: true,
       a: 1
     }
   },
-  methods: {
-    getJson () {
-      this.$http.get('/static/json/data.json', [])
-      .then((option) => {
-        alert('success')
-      }, (option) => {
-        alert('error')
-      })
+  computed:{
+    showLoading(){
+      return this.$store.state.loading
+    }
+  },
+  components:{Loading},
+  created(){
+    // 测试ajax
+    ajax.get('/borrow/ordersInfo/getOrderList',{})
+    .then((res) => {
+      // console.log(res);
+    })
+    .catch((err) => {
+      // console.log(err);
+    })
+  },
+  methods:{
+    handleClick(){
+      this.a++;
+      this.$message.error("123");
     }
   }
 }
 </script>
+
+<style>
+#app {
+  text-align: center;
+  color: #2c3e50;
+}
+</style>

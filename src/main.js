@@ -1,15 +1,27 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import VueResource from 'vue-resource'
-import ElementUI from 'element-ui'
-import '_element-ui@1.4.7@element-ui/lib/theme-default/index.css'
 import App from './App'
+import router from './router'
+import store from './store'
 
-Vue.use(VueResource)
-Vue.use(ElementUI)
+import '@/style/reset.less'
+import '@/style/common.less'
+import '@/style/main.less'
 
+import zxd from './components/common/zxd/index' // 加载公共类组件
+import './components/common/zxd/common.less' // 加载公共类组件样式
+
+Vue.config.productionTip = false
+Vue.use(zxd)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<App />',
-  components: { App }
+  router,
+  store,
+  components: { App },
+  mounted(){
+    this.$message.info("123");
+  }, 
+  template: '<App/>'
 })
