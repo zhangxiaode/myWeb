@@ -21,7 +21,6 @@ new Vue({
   store,
   components: { App },
   mounted(){
-    this.$message.info("123");
   }, 
   template: '<App/>'
 })
