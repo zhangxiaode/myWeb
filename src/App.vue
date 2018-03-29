@@ -87,7 +87,6 @@ export default {
       const draw={
         ctx: document.getElementById("bodybg").getContext("2d"),//初始化画板
         ctx2: document.getElementById("bodybg2").getContext("2d"),//初始化画板
-        meteorX: 0,//流星移动距离
         drawCircle: ()=>{},//绘制渐变的圆
         drawMoon: ()=>{},//绘制月亮
         drawMeteor: ()=>{},
@@ -195,22 +194,27 @@ export default {
         draw.drawMoon();
         let meteors=[];
         for(var j=0;j<5;j++){
-          meteors.push({meteorY: Math.random() * document.body.clientHeight, meteorWidth: Math.random() * 100 + 10, lineWidth: Math.random()*2})
+          meteors.push({meteorY: Math.random() * document.body.clientHeight, meteorWidth: Math.random() * 150 + 10, lineWidth: Math.random()*2,meteorX:-1000*Math.random()});
         }
         setInterval(()=>{
           draw.ctx2.clearRect(0,0,document.body.clientWidth,document.body.clientHeight);
-          meteors.forEach(element => {
-            if(draw.meteorX>document.body.clientWidth + 160){
-              draw.meteorX=0;
-              meteors=[];
-              for(var j=0;j<5;j++){
-                meteors.push({meteorY: Math.random() * document.body.clientHeight, meteorWidth: Math.random() * 150 + 10, lineWidth: Math.random()*2})
-              }
+          // for(var j=0;j<5;j++){
+          //   meteors.push({meteorY: Math.random() * document.body.clientHeight, meteorWidth: Math.random() * 150 + 10, lineWidth: Math.random()*2})
+          // }
+          // if(draw.meteorX>document.body.clientWidth + 160){
+          //   draw.meteorX=0;
+          //   meteors=[];
+            
+          // }
+          meteors.forEach((element,index) => {
+            draw.drawMeteor(element.meteorY, element.meteorWidth, element.lineWidth, element.meteorX);
+            element.meteorX+=1.5;
+            if(element.meteorX>document.body.clientWidth + 160){
+              meteors.splice(index,1);
+              meteors.push({meteorY: Math.random() * document.body.clientHeight, meteorWidth: Math.random() * 150 + 10, lineWidth: Math.random()*2,meteorX:-1000*Math.random()});
             }
-            draw.drawMeteor(element.meteorY, element.meteorWidth, element.lineWidth, draw.meteorX);
           });
-          draw.meteorX+=1;
-        },3)
+        },5)
       }
       draw.init();
     }
