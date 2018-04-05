@@ -1,5 +1,5 @@
 import axios from "axios"
-import store from "../store/index"
+import store from "@/store/index"
 const instance = axios.create({
     headers: {  
         'X-Requested-With': 'XMLHttpRequest',  

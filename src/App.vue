@@ -4,45 +4,10 @@
       <canvas id="bodybg" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
       <canvas id="bodybg2" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
     </div>
-    <div class="main">
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
-      <p>啊帅哥的空间啊零丁孤苦</p>
+    <div class="wrap">
+      <SiteNav></SiteNav>
+      <router-view></router-view>
+      <CopyRight></CopyRight>
     </div>
     <Loading v-if="showLoading"></Loading>
   </div>
@@ -51,13 +16,16 @@
 <script>
 import ajax from "@/utils/ajax"
 import Loading from "@/components/common/loading"
+import SiteNav from '@/components/siteNav'
+import CopyRight from '@/components/copyRight'
 export default {
   name: 'App',
+  components: {Loading,SiteNav,CopyRight},
   data(){
     return {
     }
   },
-  computed:{
+  computed: {
     showLoading(){
       return this.$store.state.loading
     },
@@ -68,22 +36,21 @@ export default {
       return document.body.clientHeight;
     },
   },
-  components:{Loading},
-  created(){
+  created() {
     // 测试ajax
-    ajax.get('/borrow/ordersInfo/getOrderList',{})
-    .then((res) => {
-      // console.log(res);
-    })
-    .catch((err) => {
-      // console.log(err);
-    })
+    // ajax.get('/borrow/ordersInfo/getOrderList',{})
+    // .then((res) => {
+    //   // console.log(res);
+    // })
+    // .catch((err) => {
+    //   // console.log(err);
+    // })
   },
-  mounted(){
+  mounted() {
     this.drawBg();
   },
-  methods:{
-    drawBg(){
+  methods: {
+    drawBg() {
       const draw={
         ctx: document.getElementById("bodybg").getContext("2d"),//初始化画板
         ctx2: document.getElementById("bodybg2").getContext("2d"),//初始化画板
@@ -159,7 +126,7 @@ export default {
       }
       draw.drawMoon=()=>{
         draw.ctx.save();
-        let grd=draw.ctx.createLinearGradient(100,150,200,150);
+        let grd=draw.ctx.createLinearGradient(100,140,160,160);
         grd.addColorStop(0,"#fff");
         grd.addColorStop(1,"transparent");
         draw.ctx.fillStyle=grd;
@@ -198,14 +165,6 @@ export default {
         }
         setInterval(()=>{
           draw.ctx2.clearRect(0,0,document.body.clientWidth,document.body.clientHeight);
-          // for(var j=0;j<5;j++){
-          //   meteors.push({meteorY: Math.random() * document.body.clientHeight, meteorWidth: Math.random() * 150 + 10, lineWidth: Math.random()*2})
-          // }
-          // if(draw.meteorX>document.body.clientWidth + 160){
-          //   draw.meteorX=0;
-          //   meteors=[];
-            
-          // }
           meteors.forEach((element,index) => {
             draw.drawMeteor(element.meteorY, element.meteorWidth, element.lineWidth, element.meteorX);
             element.meteorX+=1.5;
@@ -226,7 +185,6 @@ export default {
 #app {
   position:relative;width:100%;height:100%;
   overflow-y: auto;overflow-x: hidden;
-  text-align: center;color: #2c3e50;
   .bodybg{
     position: fixed;top:0;left:0;width:100%;height:100%;
     background:#000;overflow:hidden;
@@ -234,8 +192,8 @@ export default {
       position: absolute;top:0;left:0;
     }
   }
-  .main{
-    position:relative;z-index:1;width:500px;margin:0 auto;line-height:50px;color:#fff;
+  .wrap{
+    position:relative;z-index:1;
   }
 }
 </style>
