@@ -5,14 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    loading:false
+    loading: false
   },
   mutations: {
-    showLoading(state){
-      state.loading=true;
+    showLoading (state) {
+      state.loading = true
     },
-    hideLoading(state){
-      state.loading=false;
+    hideLoading (state) {
+      state.loading = false
     }
   },
   action: {
@@ -20,4 +20,4 @@ export default new Vuex.Store({
     // reduce(context){
     // }
   }
-});
+})

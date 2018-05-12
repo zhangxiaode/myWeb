@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import SiteNav from '@/components/siteNav'
 import HomePage from '@/view/homePage'
 import MyResume from '@/view/myResume'
 import MyAlbum from '@/view/myAlbum'
@@ -21,7 +20,7 @@ export default new Router({
     {
       path: '/homePage',
       name: 'homePage',
-      component: HomePage,
+      component: HomePage
     },
     {
       path: '/myResume',

@@ -1,11 +1,11 @@
-import Message from "./packages/message/index"
-import Loading from "./packages/loading/index"
-import "./common.less"
+import Message from './packages/message/index'
+import Loading from './packages/loading/index'
+import './common.less'
 
-const components=[
+const components = [
   Message
 ]
-const install = function(Vue, opts = {}) {
+const install = function (Vue, opts = {}) {
   // 1. 添加全局方法或属性
   // Vue.myGlobalMethod = function () {
   //   console.log("添加全局方法或属性");
@@ -26,14 +26,14 @@ const install = function(Vue, opts = {}) {
   // })
 
   // 4. 添加实例方法
-  Vue.prototype.$message = Message;
-  Vue.prototype.$loading = Loading;
-  
-  //组件注册
+  Vue.prototype.$message = Message
+  Vue.prototype.$loading = Loading
+
+  // 组件注册
   components.map(component => {
-    Vue.component(component.name, component);
-  });
-};
+    Vue.component(component.name, component)
+  })
+}
 
 /* istanbul ignore if */
 
@@ -41,4 +41,4 @@ export default {
   install,
   Message,
   Loading
-} 
+}

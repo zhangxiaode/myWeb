@@ -20,7 +20,7 @@ new Vue({
   router,
   store,
   components: { App },
-  mounted(){
-  }, 
+  mounted () {
+  },
   template: '<App/>'
 })

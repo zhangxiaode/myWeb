@@ -14,46 +14,46 @@ export default {
   name: 'Header',
   data () {
     return {
-      navList:[
+      navList: [
         {
-          name:"homePage",
-          value:"首页",
-          toLink:"/homePage"
+          name: 'homePage',
+          value: '首页',
+          toLink: '/homePage'
         },
         {
-          name:"myResume",
-          value:"个人信息",
-          toLink:"/myResume"
+          name: 'myResume',
+          value: '个人信息',
+          toLink: '/myResume'
         },
         {
-          name:"myAlbum",
-          value:"个人相册",
-          toLink:"/myAlbum"
+          name: 'myAlbum',
+          value: '个人相册',
+          toLink: '/myAlbum'
         },
         {
-          name:"qqSpace",
-          value:"QQ空间",
-          toLink:"/qqSpace"
+          name: 'qqSpace',
+          value: 'QQ空间',
+          toLink: '/qqSpace'
         },
         {
-          name:"myBlog",
-          value:"新浪博客",
-          toLink:"/myBlog"
+          name: 'myBlog',
+          value: '新浪博客',
+          toLink: '/myBlog'
         },
         {
-          name:"myArtical",
-          value:"技术文章",
-          toLink:"/myArtical"
+          name: 'myArtical',
+          value: '技术文章',
+          toLink: '/myArtical'
         },
         {
-          name:"myProject",
-          value:"工程项目",
-          toLink:"/myProject"
+          name: 'myProject',
+          value: '工程项目',
+          toLink: '/myProject'
         },
         {
-          name:"myForum",
-          value:"论坛",
-          toLink:"/myForum"
+          name: 'myForum',
+          value: '论坛',
+          toLink: '/myForum'
         }
       ]
     }
