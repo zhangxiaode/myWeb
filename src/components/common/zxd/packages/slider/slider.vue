@@ -25,7 +25,7 @@
 </template>
 
 <script>
-let sit;
+let sit
 export default {
   name: 'Zxd-slider',
   data () {
@@ -37,29 +37,29 @@ export default {
   },
   computed: {
   },
-  props: ['sliderList','effect','autoPlay','vis'],
-  mounted(){
-    this.bdWidth = document.getElementsByClassName("zxd-slider")[0].clientWidth / this.vis * this.sliderList.length;
-    this.leftWidth = -document.getElementsByClassName("zxd-slider")[0].clientWidth / this.vis * this.sliderIndex;
-    sit=setInterval(()=>{
-      this.moveLeft();
-    },2000)
+  props: ['sliderList', 'effect', 'autoPlay', 'vis'],
+  mounted () {
+    this.bdWidth = document.getElementsByClassName('zxd-slider')[0].clientWidth / this.vis * this.sliderList.length
+    this.leftWidth = -document.getElementsByClassName('zxd-slider')[0].clientWidth / this.vis * this.sliderIndex
+    sit = setInterval(() => {
+      this.moveLeft()
+    }, 2000)
   },
-  methods:{
-    moveLeft(){
-      this.sliderIndex++;
-      if(this.sliderIndex==this.sliderList.length-this.vis+1){
-        this.sliderIndex=0;
+  methods: {
+    moveLeft () {
+      this.sliderIndex++
+      if (this.sliderIndex === this.sliderList.length - this.vis + 1) {
+        this.sliderIndex = 0
       }
-      this.leftWidth = -document.getElementsByClassName("zxd-slider")[0].clientWidth / this.vis * this.sliderIndex;
+      this.leftWidth = -document.getElementsByClassName('zxd-slider')[0].clientWidth / this.vis * this.sliderIndex
     },
-    sliderOver(){
-      clearInterval(sit);
+    sliderOver () {
+      clearInterval(sit)
     },
-    sliderOut(){
-      sit=setInterval(()=>{
-        this.moveLeft();
-      },2000)
+    sliderOut () {
+      sit = setInterval(() => {
+        this.moveLeft()
+      }, 2000)
     }
   }
 }
@@ -69,15 +69,15 @@ export default {
 .hd{
   height:20px;overflow:hidden;padding:0 10px;
   .next,.prev{
-    float:right; width:5px; height:9px; margin-right:5px; margin-top:6px; 
-    background:url("../../assets/arrow.png") 0 0 no-repeat; 
-    overflow:hidden;cursor:pointer; 
+    float:right; width:5px; height:9px; margin-right:5px; margin-top:6px;
+    background:url("../../assets/arrow.png") 0 0 no-repeat;
+    overflow:hidden;cursor:pointer;
   }
   ul{
     float:right; overflow:hidden; zoom:1; margin-top:6px; zoom:1;
     li{
-      margin-right:5px; text-indent:-999px; cursor:pointer; 
-      float:left;  width:9px; height:9px; overflow:hidden; 
+      margin-right:5px; text-indent:-999px; cursor:pointer;
+      float:left;  width:9px; height:9px; overflow:hidden;
       background:#cccccc;border-radius:4.5rem;
       &.on{
         background:#ff6600;
@@ -116,5 +116,3 @@ export default {
   }
 }
 </style>
-
-
