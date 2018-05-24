@@ -1,11 +1,13 @@
 import Message from './packages/message/index'
 import Slider from './packages/slider/index'
+import Scroll from './packages/scroll/index'
 import Loading from './packages/loading/index'
 import './common.less'
 
 const components = [
   Message,
-  Slider
+  Slider,
+  Scroll
 ]
 const install = function (Vue, opts = {}) {
   // 1. 添加全局方法或属性
@@ -43,5 +45,6 @@ export default {
   install,
   Message,
   Loading,
-  Slider
+  Slider,
+  Scroll
 }
