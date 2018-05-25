@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div class="bannerScroll">
-      <Zxd-scroll :total="scrollData.length">
+      <Zxd-scroll :total="scrollData.length" :scrollData="scrollData">
         <div class="scrollItem" v-for="(item,index) in scrollData" :key="index">
           <img :src="item" alt="">
         </div>
@@ -17,10 +17,10 @@ export default {
     return {
       scrollData: [
         require('@/assets/slideImg1.jpg'),
-        require('@/assets/slideImg1.jpg'),
-        require('@/assets/slideImg1.jpg'),
-        require('@/assets/slideImg1.jpg'),
-        require('@/assets/slideImg1.jpg')
+        require('@/assets/slideImg2.jpg'),
+        require('@/assets/slideImg3.jpg'),
+        require('@/assets/slideImg4.jpg'),
+        require('@/assets/slideImg5.jpg')
       ]
     }
   }
@@ -30,12 +30,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
   .banner{
-    height:300px;overflow:hidden;
+    height:150px;overflow:hidden;
     background:url(../assets/bannerBg.png) repeat-x center center;
+    background-size:auto 150px;
     .bannerScroll{
-      height: 228px;
-      margin:36px 0;
-      // background:rgba(38,41,43,0.9);
+      height: 114px;
+      margin:18px 0;
+      .scrollItem{
+        float:left;height:100%;
+      }
+      img{
+        width:auto;height:100%;
+        margin:0 5px;
+      }
     }
   }
 </style>

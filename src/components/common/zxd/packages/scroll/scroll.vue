@@ -1,5 +1,5 @@
 <template>
-  <div class="zxd-scroll" @mouseover="sliderOver" @mouseout="sliderOut" :style="{width: bdWidth + 'px'}">
+  <div class="zxd-scroll" @mouseover="move(false)" @mouseout="move(true)" :style="{width: bdWidth + 'px', left: lef + 'px'}">
     <slot></slot>
   </div>
 </template>
@@ -9,7 +9,10 @@ export default {
   name: 'Zxd-scroll',
   data () {
     return {
-      bdWidth: 0
+      bdWidth: 0,
+      realWidth: 0,
+      lef: 0,
+      timer: ''
     }
   },
   computed: {
@@ -24,21 +27,35 @@ export default {
   },
   props: [ 'total', 'scrollData' ],
   mounted () {
-    this.bdWidth = 0
-    this.$slots.default.forEach(element => {
-      this.bdWidth += 461
-      console.log(element)
-    })
+    this.getBdWidth()
+    this.move(true)
   },
   methods: {
-    move () {
-
+    getBdWidth () {
+      setTimeout(() => {
+        this.bdWidth = 0
+        this.$slots.default.forEach(element => {
+          this.bdWidth += element.elm.getBoundingClientRect().width
+        })
+        this.realWidth = this.bdWidth
+        this.bdWidth = this.bdWidth * 2
+        var arr = this.scrollData
+        arr.map(element => {
+          this.scrollData.push(element)
+        })
+      })
     },
-    sliderOver () {
-
-    },
-    sliderOut () {
-
+    move (status) {
+      if (status) {
+        this.timer = setInterval(() => {
+          this.lef--
+          if (this.lef <= -this.realWidth) {
+            this.lef = 0
+          }
+        }, 30)
+      } else {
+        clearInterval(this.timer)
+      }
     }
   }
 }
@@ -46,13 +63,8 @@ export default {
 
 <style scoped lang="less">
   .zxd-scroll{
+    position:relative;
+    left:0;
     height:100%;
-    .scrollItem{
-      float:left;height:100%;
-    }
-    img{
-      width:auto;height:100%;
-      margin:0 5px;
-    }
   }
 </style>

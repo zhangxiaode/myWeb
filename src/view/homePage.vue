@@ -1,7 +1,7 @@
 <template>
   <div class="main homePage">
-    <Zxd-slider class="homeSlid" :sliderList="sliderList" effect="left" autoPlay=true vis=6>
-    </Zxd-slider>
+    <!-- <Zxd-slider class="homeSlid" :sliderList="sliderList" effect="left" autoPlay=true vis=6>
+    </Zxd-slider> -->
   </div>
 </template>
 
