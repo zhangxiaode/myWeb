@@ -1,9 +1,9 @@
 <template>
-  <div class="header">
+  <div class="header" @mouseover="showNav" @mouseout="hideNav">
     <div class="logo">
       <a href="javascript:;">张孝德个人网站</a>
     </div>
-    <div class="nav">
+    <div :class="['nav', {'navHover': navHover}]">
       <router-link :key="index" v-for="(item,index) in navList" :to="item.toLink">
         <img :src="item.icon" alt="">
         <span>{{ item.value }}</span>
@@ -25,48 +25,53 @@ export default {
           toLink: '/homePage'
         },
         {
-          icon: require('@/assets/home.svg'),
+          icon: require('@/assets/user.svg'),
           name: 'myResume',
           value: '个人信息',
           toLink: '/myResume'
         },
         {
-          icon: require('@/assets/home.svg'),
+          icon: require('@/assets/photo.svg'),
           name: 'myAlbum',
           value: '个人相册',
           toLink: '/myAlbum'
         },
         {
-          icon: require('@/assets/home.svg'),
-          name: 'qqSpace',
-          value: 'QQ空间',
-          toLink: '/qqSpace'
-        },
-        {
-          icon: require('@/assets/home.svg'),
+          icon: require('@/assets/blog.svg'),
           name: 'myBlog',
           value: '新浪博客',
           toLink: '/myBlog'
         },
         {
-          icon: require('@/assets/home.svg'),
+          icon: require('@/assets/product.svg'),
           name: 'myArtical',
           value: '技术文章',
           toLink: '/myArtical'
         },
         {
-          icon: require('@/assets/home.svg'),
+          icon: require('@/assets/subject.svg'),
           name: 'myProject',
           value: '工程项目',
           toLink: '/myProject'
         },
         {
-          icon: require('@/assets/home.svg'),
+          icon: require('@/assets/forum.svg'),
           name: 'myForum',
           value: '论坛',
           toLink: '/myForum'
         }
-      ]
+      ],
+      navHover: false
+    }
+  },
+  methods: {
+    showNav () {
+      this.navHover = true
+      console.log(1)
+    },
+    hideNav () {
+      this.navHover = false
+      console.log(0)
     }
   }
 }
@@ -87,6 +92,10 @@ export default {
   }
   .nav{
     text-align:center;overflow:hidden;
+    transition: all 0.2s;
+    transform-origin: center top;
+    transform: scale(0);
+    height: 0;
     a{
       display:flex; justify-content:left; align-items: center; height:30px;line-height:30px;
       border-radius:5px;margin:5px 0;
@@ -102,6 +111,10 @@ export default {
       &:hover{
         text-decoration:none;background:rgba(255,255,255,0.3);
       }
+    }
+    &.navHover{
+      transform: scale(1);
+      height: 250px;
     }
   }
 }
