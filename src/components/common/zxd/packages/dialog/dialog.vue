@@ -1,10 +1,11 @@
 <template>
   <div :class="['zxd-dialog', {'show-dialog': visible}]">
     <div class="zxd-dialog-mask" v-if="modal"></div>
-    <div class="zxd-dialog-wrap" @click.self="close">
+    <div :class="['zxd-dialog-wrap', position ? 'zxd-dialog-' + position : '']" @click.self="close">
       <div class="zxd-dialog-modal" :style="{width: width}">
         <div class="zxd-dialog-title">
           <span>{{ this.title }}</span>
+          <i>X</i>
         </div>
         <div class="zxd-dialog-body">
           <slot></slot>
@@ -15,6 +16,22 @@
       </div>
     </div>
   </div>
+  <!-- readme
+  <Zxd-dialog
+    :modal="true"
+    position="center"
+    title="Basic Modal"
+    width="30%"
+    :visible.sync="dialogVisible"
+    :onOk="ok"
+    :onCancel="cancel"
+  >
+    <span>dialog content</span>
+    <span slot="footer" class="dialog-footer">
+      <Zxd-button @click="dialogVisible = false">取 消</Zxd-button>
+      <Zxd-button type="primary" @click="dialogVisible = false">确 定</Zxd-button>
+    </span>
+  </Zxd-dialog> -->
 </template>
 
 <script>
@@ -31,6 +48,10 @@ export default {
     },
     visible: Boolean,
     modal: Boolean,
+    position: {
+      type: String,
+      default: 'center'
+    },
     onOk: Function,
     onCancel: Function,
     width: {
@@ -40,7 +61,6 @@ export default {
   },
   watch: {
     visible () {
-      console.log('visible change')
     }
   },
   mounted () {
@@ -48,6 +68,9 @@ export default {
   methods: {
     close () {
       this.$emit('update:visible', false)
+    },
+    open () {
+      this.$emit('update:visible', true)
     }
   }
 }
@@ -55,14 +78,20 @@ export default {
 
 <style scoped lang="less">
 .zxd-dialog{
-  display:none;
+  .zxd-dialog-mask{
+    display:none;
+  }
   .zxd-dialog-wrap{
-    width:0;height:0;
+    opacity: 0;
+    transform: scale(0);
   }
   &.show-dialog{
-    display:block;
+    .zxd-dialog-mask{
+      display:block;
+    }
     .zxd-dialog-wrap{
-      width:100%;height:100%;
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }
@@ -73,8 +102,24 @@ export default {
 .zxd-dialog-wrap{
   display:flex;justify-content: center;align-items: center;
   position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;
+  transform-origin: center center;
   overflow:hidden;
-  transition:all .3s;
+  transition:all .5s;
+  &.zxd-dialog-top{
+    justify-content: center;align-items: flex-start;
+  }
+  &.zxd-dialog-left{
+    justify-content: flex-start;align-items: center;
+  }
+  &.zxd-dialog-bottom{
+    justify-content: center;align-items: flex-end;
+  }
+  &.zxd-dialog-right{
+    justify-content: flex-end;align-items: center;
+  }
+  &.zxd-dialog-center{
+    justify-content: center;align-items: center;
+  }
 }
 .zxd-dialog-modal{
   border-radius:4px;overflow:hidden;background:#fff;

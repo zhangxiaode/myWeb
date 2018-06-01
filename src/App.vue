@@ -12,6 +12,7 @@
       <Zxd-button @click="dialogVisible = true">dialog</Zxd-button>
       <Zxd-dialog
         :modal="true"
+        position="center"
         title="Basic Modal"
         width="30%"
         :visible.sync="dialogVisible"
