@@ -5,7 +5,7 @@
       <div class="zxd-dialog-modal" :style="{width: width}">
         <div class="zxd-dialog-title">
           <span>{{ this.title }}</span>
-          <i>X</i>
+          <i class="close" @click="close"></i>
         </div>
         <div class="zxd-dialog-body">
           <slot></slot>
@@ -127,6 +127,14 @@ export default {
   margin:20px;
   .zxd-dialog-title{
     padding:16px 24px;
+    i.close{
+      float:right;
+      width:20px;
+      height:20px;
+      background:url(../../assets/close.svg) no-repeat center center;
+      background-size:16px;
+      cursor:pointer;
+    }
   }
   .zxd-dialog-body{
     padding:24px;
@@ -135,6 +143,9 @@ export default {
     padding:10px 16px;
     border-top:solid 1px #e8e8e8;
     text-align:right;
+    button{
+      margin:0 5px;
+    }
   }
 }
 </style>

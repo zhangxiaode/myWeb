@@ -1,30 +1,14 @@
 <template>
   <div id="app">
-    <!-- <div class="bodybg">
+    <div class="bodybg">
       <canvas id="bodybg" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
       <canvas id="bodybg2" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
-    </div> -->
+    </div>
     <div class="wrap">
-      <!-- <Banner></Banner> -->
-      <!-- <SiteNav></SiteNav> -->
-      <!-- <router-view></router-view> -->
-      <!-- <CopyRight></CopyRight> -->
-      <Zxd-button @click="dialogVisible = true">dialog</Zxd-button>
-      <Zxd-dialog
-        :modal="true"
-        position="center"
-        title="Basic Modal"
-        width="30%"
-        :visible.sync="dialogVisible"
-        :onOk="ok"
-        :onCancel="cancel"
-      >
-        <span>dialog content</span>
-        <span slot="footer" class="dialog-footer">
-          <Zxd-button @click="dialogVisible = false">取 消</Zxd-button>
-          <Zxd-button type="primary" @click="dialogVisible = false">确 定</Zxd-button>
-        </span>
-      </Zxd-dialog>
+      <Banner></Banner>
+      <SiteNav></SiteNav>
+      <router-view></router-view>
+      <CopyRight></CopyRight>
     </div>
     <Loading v-if="showLoading"></Loading>
   </div>
@@ -41,7 +25,6 @@ export default {
   components: {Loading, Banner, SiteNav, CopyRight},
   data () {
     return {
-      dialogVisible: false
     }
   },
   computed: {
@@ -66,7 +49,7 @@ export default {
     //   })
   },
   mounted () {
-    // this.drawBg()
+    this.drawBg()
   },
   methods: {
     ok () {
