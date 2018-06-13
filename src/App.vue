@@ -49,7 +49,7 @@ export default {
     //   })
   },
   mounted () {
-    // this.drawBg()
+    this.drawBg()
   },
   methods: {
     ok () {

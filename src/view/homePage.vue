@@ -22,7 +22,7 @@ export default {
   width:1200px;height:140px;margin:0 auto;
 }
 .infoBanner{
-  height:260px;background:url(../assets/infobanner.png) no-repeat center center;
+  height:200px;background:url(../assets/infobanner.png) no-repeat center center;
   background-size:cover;
 }
 </style>
