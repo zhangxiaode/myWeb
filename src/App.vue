@@ -5,10 +5,10 @@
       <canvas id="bodybg2" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
     </div>
     <div class="wrap">
-      <Banner></Banner>
-      <SiteNav></SiteNav>
+      <!-- <Banner></Banner> -->
+      <!-- <SiteNav></SiteNav> -->
       <router-view></router-view>
-      <CopyRight></CopyRight>
+      <!-- <CopyRight></CopyRight> -->
     </div>
     <Loading v-if="showLoading"></Loading>
   </div>
@@ -49,7 +49,7 @@ export default {
     //   })
   },
   mounted () {
-    this.drawBg()
+    // this.drawBg()
   },
   methods: {
     ok () {

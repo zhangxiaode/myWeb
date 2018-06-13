@@ -67,11 +67,9 @@ export default {
   methods: {
     showNav () {
       this.navHover = true
-      console.log(1)
     },
     hideNav () {
       this.navHover = false
-      console.log(0)
     }
   }
 }
@@ -80,7 +78,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .header{
-  position:fixed;top:160px;width:125px;
+  position:fixed;top:160px;width:125px;z-index:9;
   color:#fff;
   .logo{
     height:50px;
