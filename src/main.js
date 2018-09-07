@@ -9,11 +9,14 @@ import '@/style/reset.less'
 import '@/style/common.less'
 import '@/style/main.less'
 
-import zxd from './components/common/zxd/index' // 加载公共类组件
-import './components/common/zxd/common.less' // 加载公共类组件样式
+import ajax from '@/utils/ajax'
+
+import zxd from '@/components/common/zxd/index' // 加载公共类组件
+import '@/components/common/zxd/common.less' // 加载公共类组件样式
 
 Vue.config.productionTip = false
 Vue.use(zxd)
+Vue.prototype.$ajax = ajax
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -1,6 +1,10 @@
 <template>
-  <div class="zxd-scroll" @mouseover="move(false)" @mouseout="move(true)" :style="{width: bdWidth + 'px', left: lef + 'px'}">
-    <slot></slot>
+  <div class="zxd-scroll" ref="zxdScroll">
+    <div class="scrollWrap" @mouseover="move(false)" @mouseout="move(true)" :style="{width: wrapWidth + 'px', left: lef + 'px'}">
+      <div class="scrollItem" ref="scrollItem" v-for="(item,index) in newScrollData" :key="index">
+        <img :src="item" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,47 +13,50 @@ export default {
   name: 'Zxd-scroll',
   data () {
     return {
-      bdWidth: 0,
-      realWidth: 0,
+      wrapWidth: 0,
+      newScrollData: [],
       lef: 0,
       timer: ''
     }
   },
   computed: {
-    // bdWidth () {
-    //   // const wid = 0
-    //   // this.$slots.default.forEach(element => {
-    //   //   // wid += element.elm.clientWidth
-    //   //   console.log(element.elm)
-    //   // })
-    //   return 10000
-    // }
+    total () {
+      return this.newScrollData.length
+    },
+    scrollWidth () {
+      return this.$refs.zxdScroll.offsetWidth
+    }
   },
-  props: [ 'total', 'scrollData' ],
+  props: [ 'scrollData' ],
   mounted () {
-    this.getBdWidth()
-    this.move(true)
+    setTimeout(() => {
+      this.wrapWidth = 0
+      this.$refs.scrollItem.forEach(element => {
+        this.wrapWidth += element.offsetWidth
+      })
+      if (this.wrapWidth > this.scrollWidth) {
+        this.initDate(true)
+        this.move(true)
+      } else {
+        this.initDate(false)
+      }
+    }, 1000)
   },
   methods: {
-    getBdWidth () {
-      setTimeout(() => {
-        this.bdWidth = 0
-        this.$slots.default.forEach(element => {
-          this.bdWidth += element.elm.getBoundingClientRect().width
+    initDate (status) {
+      var newData = this.scrollData
+      if (status) {
+        this.scrollData.map(element => {
+          newData.push(element)
         })
-        this.realWidth = this.bdWidth
-        this.bdWidth = this.bdWidth * 2
-        var arr = this.scrollData
-        arr.map(element => {
-          this.scrollData.push(element)
-        })
-      })
+      }
+      this.newScrollData = newData
     },
     move (status) {
       if (status) {
         this.timer = setInterval(() => {
           this.lef--
-          if (this.lef <= -this.realWidth) {
+          if (this.lef <= -this.wrapWidth / 2) {
             this.lef = 0
           }
         }, 30)
@@ -63,8 +70,17 @@ export default {
 
 <style scoped lang="less">
   .zxd-scroll{
-    position:relative;
-    left:0;
-    height:100%;
+    position:relative;width:100%;height:100%;
+    .scrollWrap{
+      height:100%;white-space: nowrap;
+      position:relative;left:0;
+      .scrollItem{
+        display:inline-block;height:100%;
+      }
+      img{
+        width:auto;height:100%;
+        margin:0 5px;
+      }
+    }
   }
 </style>

@@ -15,7 +15,6 @@
 </template>
 
 <script>
-// import ajax from '@/utils/ajax'
 import Loading from '@/components/common/loading'
 import Banner from '@/components/Banner'
 import SiteNav from '@/components/siteNav'
@@ -40,7 +39,7 @@ export default {
   },
   created () {
     // 测试ajax
-    // ajax.get('/borrow/ordersInfo/getOrderList', {})
+    // this.$ajax.get('/borrow/ordersInfo/getOrderList', {})
     //   .then((res) => {
     //     console.log(res)
     //   })
