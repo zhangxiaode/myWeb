@@ -1,7 +1,6 @@
 <template>
   <div class="main homePage">
     <div class="infoBanner"></div>
-    <!-- <img :src="infoBanner" alt=""> -->
   </div>
 </template>
 
@@ -20,9 +19,5 @@ export default {
 <style scoped lang="less">
 .homeSlid{
   width:1200px;height:140px;margin:0 auto;
-}
-.infoBanner{
-  height:200px;background:url(../assets/infobanner.png) no-repeat center center;
-  background-size:cover;
 }
 </style>

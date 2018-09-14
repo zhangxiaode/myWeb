@@ -17,16 +17,16 @@ export default {
   data () {
     return {
       scrollData: [
-        require('@/assets/slideImg1.jpg'),
-        require('@/assets/slideImg2.jpg'),
-        require('@/assets/slideImg3.jpg'),
-        require('@/assets/slideImg4.jpg'),
         require('@/assets/slideImg5.jpg'),
-        require('@/assets/slideImg6.jpg'),
-        require('@/assets/slideImg7.jpg'),
-        require('@/assets/slideImg8.jpg'),
-        require('@/assets/slideImg9.jpg'),
-        require('@/assets/slideImg10.jpg')
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg'),
+        require('@/assets/slideImg5.jpg')
       ],
       newScrollData: [],
       wrapWidth: 0,

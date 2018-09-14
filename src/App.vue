@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="bodybg">
+    <!-- <div class="bodybg">
       <canvas id="bodybg" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
       <canvas id="bodybg2" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
-    </div>
+    </div> -->
     <div class="wrap">
       <Banner></Banner>
       <SiteNav></SiteNav>
@@ -48,7 +48,7 @@ export default {
     //   })
   },
   mounted () {
-    this.drawBg()
+    // this.drawBg()
   },
   methods: {
     ok () {
@@ -192,6 +192,7 @@ export default {
 #app {
   position:relative;width:100%;height:100%;
   overflow-y: auto;overflow-x: hidden;
+  background:url(./assets/bodybg.jpg) repeat center center;
   .bodybg{
     position: fixed;top:0;left:0;width:100%;height:100%;
     background:#000;overflow:hidden;
@@ -201,6 +202,7 @@ export default {
   }
   .wrap{
     position:relative;z-index:1;
+    // background:url(./assets/bodybg2.jpg) repeat center center;
   }
 }
 </style>
