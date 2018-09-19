@@ -101,7 +101,7 @@ export default {
         color:#fff;font-size:16px;font-weight:bold;
       }
       img{
-        width:20px;height:20px;padding:5px;
+        width:16px;height:16px;padding:7px;
       }
       &.router-link-active{
         background:rgba(255,255,255,0.3);
