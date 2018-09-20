@@ -73,7 +73,7 @@
           网站推广
         </div>
         <div class="boxCont">
-          <a v-for="(item,index) in websiteList" :key="index" :href="item.url" :class="item.calssName">{{item.webName}}</a>
+          <a v-for="(item,index) in websiteList" :key="index" target="_blank" :href="item.url" :class="item.calssName">{{item.webName}}</a>
         </div>
       </div>
     </div>
