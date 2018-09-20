@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">Copyright 2015 豫ICP备15014322号</div>
+  <div class="footer"><a href="http://www.miitbeian.gov.cn/">Copyright 2015 豫ICP备15014322号</a></div>
 </template>
 
 <script>
@@ -15,7 +15,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .footer{
-  text-align: center;color: #fff;font-size:14px;
   height:30px;line-height:30px;
+  text-align: center;
+  a{
+    color: #fff;font-size:14px;
+  }
 }
 </style>
