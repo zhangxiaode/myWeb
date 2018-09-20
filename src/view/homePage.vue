@@ -256,16 +256,16 @@ export default {
       ],
       entranceList: [
         {
-          img: require('../assets/pic1.jpg'),
+          img: require('../assets/pic1.jpg')
         },
         {
-          img: require('../assets/pic2.jpg'),
+          img: require('../assets/pic2.jpg')
         },
         {
-          img: require('../assets/pic3.jpg'),
+          img: require('../assets/pic3.jpg')
         },
         {
-          img: require('../assets/pic4.jpg'),
+          img: require('../assets/pic4.jpg')
         }
       ],
       forumList: [
