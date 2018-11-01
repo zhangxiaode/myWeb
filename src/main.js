@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import kk from 'kangkang-ui'
 
 import '@/style/reset.less'
 import '@/style/common.less'
@@ -11,11 +12,8 @@ import '@/style/main.less'
 
 import ajax from '@/utils/ajax'
 
-import zxd from '@/components/common/zxd/index' // 加载公共类组件
-import '@/components/common/zxd/common.less' // 加载公共类组件样式
-
 Vue.config.productionTip = false
-Vue.use(zxd)
+Vue.use(kk)
 Vue.prototype.$ajax = ajax
 /* eslint-disable no-new */
 new Vue({
@@ -24,6 +22,7 @@ new Vue({
   store,
   components: { App },
   mounted () {
+    console.log(kk)
   },
   template: '<App/>'
 })
