@@ -22,7 +22,6 @@ new Vue({
   store,
   components: { App },
   mounted () {
-    console.log(kk)
   },
   template: '<App/>'
 })
