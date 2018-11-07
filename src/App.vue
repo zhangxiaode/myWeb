@@ -5,23 +5,10 @@
       <canvas id="bodybg2" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
     </div> -->
     <div class="wrap">
-      <Kk-Pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="currentPage"
-        :page-sizes="[10, 20, 30, 40]"
-        :page-size="10"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="40"
-        disabled
-        pageSizesClass=''
-        size="default"
-      >
-      </Kk-Pagination>
-      <!-- <Banner></Banner>
+      <Banner></Banner>
       <SiteNav></SiteNav>
       <router-view></router-view>
-      <CopyRight></CopyRight> -->
+      <CopyRight></CopyRight>
     </div>
     <Loading v-if="showLoading"></Loading>
   </div>
@@ -37,7 +24,6 @@ export default {
   components: {Loading, Banner, SiteNav, CopyRight},
   data () {
     return {
-      currentPage: 1
     }
   },
   computed: {
@@ -205,12 +191,6 @@ export default {
         }, 5)
       }
       draw.init()
-    },
-    handleSizeChange (val) {
-      console.log(`每页 ${val} 条`)
-    },
-    handleCurrentChange (val) {
-      console.log(`当前页: ${val}`)
     }
   }
 }
@@ -220,7 +200,7 @@ export default {
 #app {
   position:relative;width:100%;height:100%;
   overflow-y: auto;overflow-x: hidden;
-  // background:url(./assets/bodybg.jpg) repeat center center;
+  background:url(./assets/bodybg.jpg) repeat center center;
   .bodybg{
     position: fixed;top:0;left:0;width:100%;height:100%;
     background:#000;overflow:hidden;
