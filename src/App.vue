@@ -4,13 +4,13 @@
       <canvas id="bodybg" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
       <canvas id="bodybg2" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
     </div> -->
-    <div class="wrap">
+    <!-- <div class="wrap">
       <Banner></Banner>
       <SiteNav></SiteNav>
       <router-view></router-view>
       <CopyRight></CopyRight>
     </div>
-    <Loading v-if="showLoading"></Loading>
+    <Loading v-if="showLoading"></Loading> -->
   </div>
 </template>
 
@@ -57,6 +57,13 @@ export default {
   },
   mounted () {
     // this.drawBg()
+    this.$ajax.get('/apis/demo', {})
+      .then((res) => {
+        console.log(res)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   },
   methods: {
     ok () {
@@ -200,7 +207,7 @@ export default {
 #app {
   position:relative;width:100%;height:100%;
   overflow-y: auto;overflow-x: hidden;
-  background:url(./assets/bodybg.jpg) repeat center center;
+  // background:url(./assets/bodybg.jpg) repeat center center;
   .bodybg{
     position: fixed;top:0;left:0;width:100%;height:100%;
     background:#000;overflow:hidden;

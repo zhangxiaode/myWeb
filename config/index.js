@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/admin': {
-        target: 'http://rxhapi.51kaledai.com',
+      '/apis': {
+        target: 'localhost:8888',
         changeOrigin: true,
         pathRewrite: {
-          '^/admin': ''
+          '^/apis': ''
         }
       }
     },
