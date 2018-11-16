@@ -138,7 +138,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
   .myResume{
-    width:1200px;margin:0 auto;
+    width:1200px;margin:0 auto;max-width:80%;
     .resumeHd{
       display:flex;justify-content: center;align-items: center;
       height:60px;padding:30px 0;
