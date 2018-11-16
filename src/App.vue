@@ -4,13 +4,13 @@
       <canvas id="bodybg" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
       <canvas id="bodybg2" :width="bodyBgWidth" :height="bodyBgHeight"></canvas>
     </div> -->
-    <!-- <div class="wrap">
+    <div class="wrap">
       <Banner></Banner>
       <SiteNav></SiteNav>
       <router-view></router-view>
       <CopyRight></CopyRight>
     </div>
-    <Loading v-if="showLoading"></Loading> -->
+    <Loading v-if="showLoading"></Loading>
   </div>
 </template>
 
@@ -47,23 +47,16 @@ export default {
   },
   created () {
     // 测试ajax
-    // this.$ajax.get('/borrow/ordersInfo/getOrderList', {})
+  },
+  mounted () {
+    // this.drawBg()
+    // this.$ajax.get('/blog/apis/helloworld', {})
     //   .then((res) => {
     //     console.log(res)
     //   })
     //   .catch(function (error) {
     //     console.log(error)
     //   })
-  },
-  mounted () {
-    // this.drawBg()
-    this.$ajax.get('/apis/demo', {})
-      .then((res) => {
-        console.log(res)
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
   },
   methods: {
     ok () {
