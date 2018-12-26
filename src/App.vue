@@ -49,13 +49,26 @@ export default {
   },
   mounted () {
     // this.drawBg()
-    // this.$ajax.get('/blog/apis/helloworld', {})
-    //   .then((res) => {
-    //     console.log(res)
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error)
-    //   })
+    this.$ajax.get('/user/findUser', {}).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+    this.$ajax.get('/user/addUser', {}).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+    this.$ajax.get('/user/updateUser', {}).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+    this.$ajax.get('/user/deleteUser', {}).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
   },
   methods: {
     ok () {
