@@ -44,7 +44,12 @@ export default {
     //   window.location.href = 'http://www.zhangxiaode.com/#/homepage'
     // }
   },
-  created () {
+  async created () {
+    const getData = async () => {
+      return Promise.resolve(this.ajax.get(`/findUser`, {}))
+    }
+    const res = await getData()
+    console.log(res)
     // 测试ajax
   },
   mounted () {
