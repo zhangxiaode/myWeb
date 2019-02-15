@@ -52,18 +52,55 @@
       <div class="resumeSection">
         <div class="secTit"><span>技能应用</span></div>
         <div class="secCont">
-          <p>1、熟悉Vue、h5、css3、es6、less，sass。</p>
-          <p>2、熟悉Vue项目框架搭建,webpack项目环境配置，vue组件封装。</p>
-          <p>3、熟悉react、jQuery、canvas、页面响应式设计、浏览器兼容、echarts等图表类组件。</p>
-          <p>4、熟悉git与svn版本控制，有Linux、mac等平台开发经验,</p>
-          <p>5、了解 react-native,angular,nodeJS,数据库MySQL和orical;后端开发语言php和Java;熟悉Photoshop,</p>
-          <p>6、习惯编辑器：webstorm,visual-Studio-code，sublime，eclipse,</p>
-          <p>附GitHub账号：https://github.com/zhangxiaode</p>
+          <ul>
+            <li>
+              <h2>1、 前端框架及技术栈的使用</h2>
+              <p>熟悉MVVM、MVC框架，深入理解模块化编程思想，熟悉前端编译和构建工具，熟练掌握webpack的各项配置，能够独立搭建基于webpack的项目,熟悉h5+css3+es6，熟练使用原生JavaScript编程。熟悉Vue项目框架搭建并深入理解框架及其设计原理，能熟练使用vue技术栈开发应用。熟悉webpack + vue + vue-router + vuex + axios + less/sass + elementUI/mintUI开发。熟悉react项目框架搭建并能熟练使用react开发项目，熟悉webpack + react + react-router + redux + less/sass + Ant Design/Ant Design Mobile开发。熟悉微信小程序、微信公众号开发、有移动端开发经验。</p>
+              <p>熟悉jQuery、canvas及echarts、highcharts、d3等图表类组件的使用。</p>
+              <p>了解angular、react native。</p>
+            </li>
+            <li>
+              <h2>2、 后端及服务器相关</h2>
+              <p>熟悉Java开发流程，深入理解面向对象编程思想，有spring boot + mybatis + maven + mysql项目开发经验，有gitlib服务器搭建经验，熟悉tomcat、apache项目配置及项目发布流程，熟悉https服务器搭建,熟悉linux/windows + apache + php + mysql项目搭建,熟悉nginx代理配置，熟悉phpmyadmin等数据库操作工具，对nodeJS、Orical也有一定了解。</p>
+            </li>
+            <li>
+              <h2>3、 UI组件库</h2>
+              <p>熟悉elementUI、antDesign、mint-ui、Ant Design Mobile、jQueryUI等UI组件库，有UI框架开发经验,能根据业务需求，封装高复用、可维护性好的前端基础组件。</p>
+              <p>npm自开发组件库:https://www.npmjs.com/package/kangkang-ui</p>
+              <p>使用方法：npm install kangkang-ui (开发中)。</p>
+            </li>
+            <li>
+              <h2>4、 操作系统</h2>
+              <p>熟悉centos、ubuntu等Linux操作系统的使用、能熟练使用yum、apt、wget等Linux命令搭建服务器、有windows、Linux、mac等平台开发经验。</p>
+            </li>
+            <li>
+              <h2>5、 编译工具</h2>
+              <p>常用编辑器：VSCode、idea、webstorm、sublime、eclipse、wechat_devtools</p>
+            </li>
+            <li>
+              <h2>6、 交互与设计</h2>
+              <p>熟悉交互设计，对可用性、可访问性等用户体验知识有深刻理解,熟悉Photoshop及原型设计工具Axure RP。</p>
+            </li>
+            <li>
+              <h2>7、 其他</h2>
+              <p>熟悉前端工程化构建策略及工具webpack，掌握常见性能优化的方法，熟悉git、svn等版本控制系统，能熟练编写响应式的界面，具有Android、iPhone、iPad等智能手机上基于浏览器的h5应用开发经验，熟悉eslint代码规范，熟悉浏览器兼容，掌握 HTTP 及相关网络协议，熟悉项目发布流程，具有很强的技术研发和创新能力、良好的沟通表达能力、很强的业务理解和技术实现能力。</p>
+              <p>GitHub分享：https://github.com/zhangxiaode</p>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="resumeSection experience">
         <div class="secTit"><span>工作经历</span></div>
         <div class="secCont">
+          <h2>芮想信息科技有限公司（2018/4至今）</h2>
+          <p><strong>工作描述：</strong>在职期间主要负责快乐菜场、数据开放平台等项目的功能开发、组件开发及项目优化工作。项目涉及到权限控制、路由、状态管理、组件库、以及移动端项目与原生的交互等。主要负责快乐菜场、数据开放平台、媒资系统等项目的研发工作，项目主要框架为vue</p>
+          <p><strong> 项目经验：</strong></p>
+          <p>1、快乐菜场</p>
+          <p><strong>项目描述：</strong>是在APP发布的方便公司员工在线订购食材的一款h5移动端应用，项目框架是vue+mint-ui，现已发布上线。项目主体包括在线订购、今日小票、历史订单三个模块，实现了线上预定，线下交付的一套商品预定流程。</p>
+          <p><strong>责任描述：</strong>主要负责项目的前端框架搭建、页面切图、接口调试、兼容性调试、项目发布、对接app等工作。</p>
+          <p>2、数据开放平台</p>
+          <p><strong>项目描述：</strong>数据开放平台是为用户提供数据的开发平台。项目框架为vue+elementui，项目共分五大模块：登录模块、网关管理、接口文档、指标管理、管理中心，通过权限控制以实现对外的接口开放平台，使外部服务对象方便的调用公共接口的数据。</p>
+          <p><strong>责任描述：</strong>主要负责服务模块、预警模块、监控模块、日志管理、接口文档、秘钥管理、合作媒体管理等模块的开发，页面书写、接口调试及权限控制。</p>
           <h2>浙江小赢卡乐信息技术有限公司（2017/9-2018/3）</h2>
           <p><strong>工作描述：</strong>在职期间主要负责金牛管家、贷加加、奥铄等项目的功能开发、组件开发及项目优化工作。项目涉及到权限控制、路由、状态管理、组件库、以及移动端项目与原生的交互等。</p>
           <p><strong> 项目经验：</strong></p>
@@ -94,26 +131,55 @@
           <p><strong>项目描述：</strong>常德市委常委政法委书记黄清宇书记要求常德市市级网格化平台从业务应用到系统页面和交互提出了非常高的要求，并要求定期整改完成，在此紧急情况下，和设计一起出差常德，支撑该项目的改版工作。</p>
           <p><strong>责任描述：</strong>出差常德，配合设计与开发完成该项目的改版工作，并在大屏上进行兼容性调试。使用技术栈有h5、css3、jquery、ajax、echarts等</p>
           <p><strong>项目地址：</strong>www.zhangxiaode.com/changde/</p>
-          <h2>附Github项目地址如下：</h2>
-          <p>龙虾养殖（技术栈：vue/es6/css3）：https://github.com/zhangxiaode/breed</p>
-          <p>仿淘宝首页（技术栈：jquery/php/mysql）：https://github.com/zhangxiaode/itaobao</p>
-          <p>仿淘宝移动端首页(技术栈：jquery/h5/css3/)：https://github.com/zhangxiaode/taobaoMobile</p>
-          <p>仿YouTube制作视频插件（技术栈：h5-video）：https://github.com/zhangxiaode/video</p>
-          <p>仿百度天气（技术栈：canvas）：https://github.com/zhangxiaode/weather</p>
+          <h2>个人项目</h2>
+          <p>1、亢亢点单</p>
+          <p><strong>项目描述：</strong>一款智能点餐的微信小程序，支持线下扫码点餐、在线支付功能。</p>
+          <p><strong>前端git地址：</strong><a href="https://github.com/zhangxiaode/newShopping.git">https://github.com/zhangxiaode/newShopping.git</a></p>
+          <p><strong>后端git地址：</strong><a href="https://github.com/zhangxiaode/shoppingJava.git">https://github.com/zhangxiaode/shoppingJava.git</a>技术栈：spring-boot + maven + mybatis + mysql,该项目已配置nginx代理，并安装了ssl证书</p>
+          <p><strong>接口访问地址为：</strong>https://wx.zxdkxl.com/apis/***</p>
+          <p>2、个人网站</p>
+          <p><strong>项目描述：</strong>用于展示个人信息的网站。</p>
+          <p><strong>前端git地址：</strong><a href="https://github.com/zhangxiaode/myWeb.git">https://github.com/zhangxiaode/myWeb.git</a>技术栈：vue + vue-router + vuex + less + axios + elementUI</p>
+          <p><strong>后端git地址：</strong><a href="https://github.com/zhangxiaode/myWebJava.git">https://github.com/zhangxiaode/myWebJava.git</a>技术栈：spring-boot + maven + mybatis + mysql,该项目已配置nginx代理，并安装了ssl证书</p>
+          <p><strong>访问地址为：</strong><a href="https://www.zxdkxl.com">https://www.zxdkxl.com</a></p>
+          <p>3、个人网站移动端</p>
+          <p><strong>项目描述：</strong>用于展示个人信息的h5应用。</p>
+          <p><strong>前端git地址：</strong><a href="https://github.com/zhangxiaode/zxdMobile.git">https://github.com/zhangxiaode/zxdMobile.git</a>技术栈：vue + vue-router + vuex + less + axios</p>
+          <p><strong>后端git地址：</strong><a href="https://github.com/zhangxiaode/zxdMobileJava.git">https://github.com/zhangxiaode/zxdMobileJava.git</a>技术栈：spring-boot + maven + mybatis + mysql,该项目已配置nginx代理，并安装了ssl证书</p>
+          <p><strong>访问地址为：</strong><a href="https://m.zxdkxl.com">https://m.zxdkxl.com</a></p>
+          <p>4、个人博客</p>
+          <p><strong>项目描述：</strong>一款类似于知乎的博客论坛。</p>
+          <p><strong>前端git地址：</strong><a href="https://github.com/zhangxiaode/blog.git">https://github.com/zhangxiaode/blog.git</a>技术栈：react + react-router + redux + less + axios + Ant Design</p>
+          <p><strong>后端git地址：</strong><a href="https://github.com/zhangxiaode/blogJava.git">https://github.com/zhangxiaode/blogJava.git</a>技术栈：spring-boot + maven + mybatis + mysql,该项目已配置nginx代理，并安装了ssl证书</p>
+          <p><strong>访问地址为：</strong><a href="https://blog.zxdkxl.com">https://blog.zxdkxl.com</a></p>
+          <p>5、kangkang-ui</p>
+          <p><strong>项目描述：</strong>自己设计的一款vue UI框架（待完善）</p>
+          <p><strong>npm地址：</strong><a href="https://www.npmjs.com/package/kangkang-ui">https://www.npmjs.com/package/kangkang-ui</a></p>
+          <p>6、仿淘宝首页</p>
+          <p><strong>技术栈：</strong>jquery/php/mysql</p>
+          <p><strong>git地址：</strong><a href="https://github.com/zhangxiaode/itaobao.git">https://github.com/zhangxiaode/itaobao.git</a></p>
+          <p><strong>访问地址为：</strong><a href="http://www.zhangxiaode.com/itaobao/root/tcms/">http://www.zhangxiaode.com/itaobao/root/tcms/</a></p>
+          <p>7、仿YouTube视频插件制作</p>
+          <p><strong>技术栈：</strong>h5-video</p>
+          <p><strong>git地址：</strong><a href="https://github.com/zhangxiaode/video.git">https://github.com/zhangxiaode/video.git</a></p>
+          <p><strong>访问地址为：</strong><a href="http://www.zhangxiaode.com/video">http://www.zhangxiaode.com/video</a></p>
+          <p>8、仿百度天气</p>
+          <p><strong>技术栈：</strong>canvas</p>
+          <p><strong>git地址：</strong><a href="https://github.com/zhangxiaode/weather.git">https://github.com/zhangxiaode/weather.git</a></p>
+          <p><strong>访问地址为：</strong><a href="http://www.zhangxiaode.com/weather">http://www.zhangxiaode.com/weather</a></p>
         </div>
       </div>
       <div class="resumeSection">
         <div class="secTit"><span>个人爱好</span></div>
         <div class="secCont">
-          喜欢爬山、健身、美食、旅游，喜欢热闹。
-          技术方面，喜欢研究新技术，前端有es6、框架、组件、css3常用样式总结以及js底层方法的研究。有时间也会研究一些其他方面的技术，比如虚拟现实的web端实现(webvr)、全息投影、3dsmax室内设计
+          <p>喜欢爬山、健身、美食、旅游。</p>
         </div>
       </div>
       <div class="resumeSection">
         <div class="secTit"><span>自我评价</span></div>
         <div class="secCont">
-          本人性格稳重、真诚；热衷技术，积极主动，能吃苦耐劳，勇于承受压力，勇于创新；有很强的组织能力和团队协作精神，具有较强的适应能力；工作积极配合，具有较强的无私奉献精神。
-          对待工作认真负责，善于沟通、协调，有较强的组织能力与团队意识；上进心强、勤于学习能不断提高自身的能力与综合素质。在未来的工作中，我将以充沛的精力，刻苦钻研的精神来努力工作，稳定地提高自己的工作能力，与企业同步发展。
+          <p>对待工作认真负责，善于沟通、协调，有较强的组织能力与团队意识；上进心强、勤于学习能不断提高自身的能力与综合素质。在未来的工作中，我将以充沛的精力，刻苦钻研的精神来努力工作，稳定地提高自己的工作能力，与企业同步发展。</p>
+          <p>技术方面，热衷于新技术的研发，对各种编程语言都有涉猎，主修前端，兼做java，做过vue、react、jQuery、小程序、公众号，h5客户端应用、spring-boot后端开发等；搭建过gitlab服务、lamp服务、nginx服务、java服务、配置过ssl；开发过vue的UI框架，npm地址：https://www.npmjs.com/package/kangkang-ui；除此之外还熟悉原型设计工具rp和UI设计工具PS</p>
         </div>
       </div>
     </div>
