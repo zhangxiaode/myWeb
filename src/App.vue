@@ -37,21 +37,14 @@ export default {
       return document.body.clientHeight
     }
   },
-  beforeCreate () {
-    // if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-    //   window.location.href = 'http://www.zhangxiaode.com/mobile/#/layout/homepage'
-    // } else {
-    //   window.location.href = 'http://www.zhangxiaode.com/#/homepage'
-    // }
-  },
-  async created () {
-    const getData = async () => {
-      return Promise.resolve(this.ajax.get(`/findUser`, {}))
-    }
-    const res = await getData()
-    console.log(res)
-    // 测试ajax
-  },
+  // async created () {
+  //   const getData = async () => {
+  //     return Promise.resolve(this.ajax.get(`/findUser`, {}))
+  //   }
+  //   const res = await getData()
+  //   console.log(res)
+  //   // 测试ajax
+  // },
   mounted () {
     // this.drawBg()
     this.$ajax.get('/findUser', {}).then(res => {

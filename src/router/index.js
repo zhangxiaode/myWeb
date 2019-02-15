@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '@/view/homePage'
 import MyResume from '@/view/myResume'
+import Resume from '@/view/resume'
 import MyAlbum from '@/view/myAlbum'
 import QqSpace from '@/view/qqSpace'
 import MyBlog from '@/view/myBlog'
@@ -21,6 +22,11 @@ export default new Router({
       path: '/homePage',
       name: 'homePage',
       component: HomePage
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: Resume
     },
     {
       path: '/myResume',
