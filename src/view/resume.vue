@@ -181,7 +181,7 @@
         <div class="secTit"><span>自我评价</span></div>
         <div class="secCont">
           <p>对待工作认真负责，善于沟通、协调，有较强的组织能力与团队意识；上进心强、勤于学习能不断提高自身的能力与综合素质。在未来的工作中，我将以充沛的精力，刻苦钻研的精神来努力工作，稳定地提高自己的工作能力，与企业同步发展。</p>
-          <p>技术方面，热衷于新技术的研发，对各种编程语言都有涉猎，主修前端，兼做java，做过vue、react、jQuery、小程序、公众号，h5客户端应用、spring-boot后端开发等；搭建过gitlab服务、lamp服务、nginx服务、java服务、配置过ssl；开发过vue的UI框架，npm地址：<a target="_blank" href="https://www.npmjs.com/package/kangkang-ui">https://www.npmjs.com/package/kangkang-ui</a>；除此之外还熟悉原型设计工具rp和UI设计工具PS</p>
+          <p>技术方面，热衷于新技术的研发，对各种编程语言都有涉猎，主修前端，兼做java，做过vue、react、jQuery、小程序、公众号，h5客户端应用、spring-boot后端开发等；搭建过gitlab服务、lamp服务、nginx服务、java服务、配置过ssl；开发过vue的UI框架，npm地址：<a target="_blank" href="https://www.npmjs.com/package/kangkang-ui">https://www.npmjs.com/package/kangkang-ui</a>；除此之外还熟悉原型设计工具rp和UI设计工具PS。</p>
         </div>
       </div>
     </div>
@@ -214,8 +214,8 @@ export default {
 <style scoped lang="less">
   .resume{
     position:fixed;top:0;left:0;right:0;bottom:0;z-index: 9999;
+    font-size:16px;word-break:break-all;
     background:#333;overflow:auto;
-    font-size:16px;
     a{
       color:rgb(26, 135, 224);
     }
