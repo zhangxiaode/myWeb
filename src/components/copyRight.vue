@@ -1,5 +1,5 @@
 <template>
-  <div class="footer"><a href="http://www.miitbeian.gov.cn/">Copyright 2015 豫ICP备15014322号</a></div>
+  <div class="footer"><a href="https://beian.miit.gov.cn">Copyright 2015 豫ICP备15014322号</a></div>
 </template>
 
 <script>
